@@ -1,0 +1,53 @@
+<!--chooseTime.wxml-->
+
+
+<view class="infoText">{{year}}-{{month}}-{{day}} {{hour}}:{{minute}}:{{second}}</view>
+<view class="aaaa" >
+  <button class="animation-button" bindtap="translate">选择时间</button>
+</view>
+      
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" catchtap="hiddenFloatView">
+  <view class="animation-element" catchtap="nono">
+      <text class="left-bt" catchtap="hiddenFloatView">取消</text>
+      <text class="right-bt" catchtap="hiddenFloatView">确定</text>
+      <view class="line"></view> 
+  <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange">
+    <!--年-->
+  <picker-view-column>
+      <view wx:for="{{years}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+    <!--月-->
+    <picker-view-column>
+      <view wx:for="{{months}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+    <!--日-->
+    <picker-view-column>
+      <view wx:for="{{days}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+    <!--时-->
+    <picker-view-column>
+      <view wx:for="{{hours}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+    <!--分-->
+    <picker-view-column>
+      <view wx:for="{{minutes}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+    <!--秒-->
+    <picker-view-column>
+      <view wx:for="{{seconds}}" wx:key="" >
+        {{item}}
+      </view>
+    </picker-view-column>
+  </picker-view>   
+  </view>
+</view>
