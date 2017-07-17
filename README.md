@@ -27,6 +27,7 @@ function zeroPadding(i){
   // return (Array(2).join(0) + i).slice(-2);
 }
 ```
+![图1 最终效果](https://static.oschina.net/uploads/img/201707/17174637_oHEm.png)
 
 如果不需要秒的同学，可以自行去掉一个<picker-view-column></picker-view-column>做些相应的修改就可以了。
 
