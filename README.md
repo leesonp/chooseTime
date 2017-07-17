@@ -4,7 +4,7 @@
 值得注意的是，滑动月份的时候每个月的天数是不固定的。也就是会存在每月28、29、30或31天的情况。我们要做出判断，实时更新天数。
 
 我们可以用这个方法获取当前年月的天数
-
+```
 //输入年、月计算当月天数并推入数组
 var getDays = function (year, month) {
   // month 取自然值，从 1-12 而不是从 0 开始
@@ -26,8 +26,7 @@ function zeroPadding(i){
   return ('0' + i).slice(-2);
   // return (Array(2).join(0) + i).slice(-2);
 }
-图1 最终效果
+```
 
 如果不需要秒的同学，可以自行去掉一个<picker-view-column></picker-view-column>做些相应的修改就可以了。
 
-Demo放在git了有需要的可以去下载。谢谢。
